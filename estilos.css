@@ -2,16 +2,17 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f0faff;
   margin: 0;
-  padding: 1rem;
+  padding: 1vw;
 }
 
 .malla {
   display: flex; 
   flex-direction: row;
-  gap: 20px; 
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start; 
-  padding: 20px;
+  gap: 20px; 
+  padding: 2vw;
   background-color: #e0f7ff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -27,9 +28,10 @@ h1.titulo {
 .semestre-columna {
   display: flex; 
   flex-direction: column;
-  width: 250px; 
+  flex-basis: 22%;
+  min-width: 200px;
   background-color:#e0f7ff;
-  border: 2px solid #00b4d8;
+  border: 0.2vw solid #00b4d8;
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
@@ -49,7 +51,7 @@ h1.titulo {
   display: flex; 
   justify-content: center;
   align-items: center; 
-  padding: 12px 15px;
+  padding: 1.2vw 1.5vw;
   margin-bottom: 8px;
   border-radius: 5px;
   text-align: center; 
@@ -58,7 +60,7 @@ h1.titulo {
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
   border: 2px solid #5dcde3;
   background-color: #d9f8ff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.4vw 0.6vw rgba(0, 0, 0, 0.1);
 }
 
 .ramo:hover {
