@@ -8,23 +8,31 @@ body {
 h1 {
   text-align: center;
   color: #0077b6;
+  margin-bottom: 2rem;
+}
+
+.semestre {
+  background-color:#e0f7ff;
+  border: 2px solid #00b4d8;
+  border-radius: 12px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  max-width:1400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .semestre h2 {
   font-weight: bold;
-  font-style: italic;
   color: #0552b3;
-  margin-top: 2rem;
   margin-bottom: 1rem;
+  text-aling: center;
 }
 
 .malla {
   display: grid;
-  grid-template-columns: repeat(6, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
-  padding: 0 1rem 2rem 1rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 0 1rem 
 }
 
 .ramo {
