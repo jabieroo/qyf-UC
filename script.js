@@ -88,16 +88,34 @@ for(let i = 1; i <= totalSemestres; i++) {
 
 function aprobarRamo(id) {
   const ramo = ramosMap[id];
-  if (ramo.requisitos.some(req => !ramosMap[req].aprobado)) return; // bloqueado
-  if (ramo.aprobado) return; // ya aprobado
-  ramo.aprobado = true;
-  ramo.div.classList.remove("bloqueado");
-  ramo.div.classList.add("aprobado");
-  // Desbloquear los ramos que dependen de este
-  ramo.abre.forEach(idDest => {
-    const destino = ramosMap[idDest];
-    if (destino && destino.requisitos.every(req => ramosMap[req].aprobado)) {
-      destino.div.classList.remove("bloqueado");
+  if (ramo.aprobado) {
+    const ramosQueDependen = ramos.filter(r => r.requisitos.includes(id) && ramosMap[r.id].aprobado);
+    if (ramosQueDependen.length > 0) {
+      alert("No se puede des-aprobar este ramo porque otros ramos ya aprobados dependen de él.");
+      return;
     }
-  });
+    // Si no hay dependencias, des-aprobarlo
+    ramo.aprobado = false;
+    ramo.div.classList.remove("aprobado");
+    ramo.abre.forEach(idDest => {
+      const destino = ramosMap[idDest];
+      if (destino) {
+        destino.div.classList.add("bloqueado");
+      }
+    });
+  } else {
+    if (ramo.requisitos.some(req => !ramosMap[req].aprobado)) {
+      alert("Debes aprobar los ramos requisitos primero.");
+      return;
+    }
+    ramo.aprobado = true;
+    ramo.div.classList.remove("bloqueado");
+    ramo.div.classList.add("aprobado");
+    ramo.abre.forEach(idDest => {
+      const destino = ramosMap[idDest];
+      if (destino && destino.requisitos.every(req => ramosMap[req].aprobado)) {
+        destino.div.classList.remove("bloqueado");
+      }
+    });
+  }
 }
