@@ -31,7 +31,7 @@ h1.titulo {
   flex-basis: calc (25% - 2vw);
   max-width: 300px;
   min-width: 200px;
-  background-color:#8ee4f5;
+  background-color:#abe9f5;
   border: 0.2vw solid #00b4d8;
   border-radius: 8px;
   padding: 15px;
@@ -60,7 +60,7 @@ h1.titulo {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
   border: 2px solid #5dcde3;
-  background-color: #78d2eb;
+  background-color: #ade1f0;
   box-shadow: 0 0.4vw 0.6vw rgba(0, 0, 0, 0.1);
 }
 
