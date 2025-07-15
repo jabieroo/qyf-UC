@@ -1,5 +1,5 @@
 body {
-  font-family: Times-New-Roman;
+  font-family: Arial;
   background-color: #f0faff;
   margin: 0;
   padding: 1rem;
@@ -10,11 +10,19 @@ h1 {
   color: #0077b6;
 }
 
+.semestre h2 {
+  font-weight: bold;
+  font-style: italic;
+  color: #0552b3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 .malla {
   display: grid;
   grid-template-columns: repeat(6, minmax(150px, 1fr));
   gap: 1rem;
-  padding: 2rem;
+  padding: 0 1rem 2rem 1rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -39,6 +47,7 @@ h1 {
   border-color: #ed74ad;
   color: #ed539c;
   font-weight: bold;
+  font-style: italic;
 }
 
 .ramo.bloqueado {
