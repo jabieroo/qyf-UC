@@ -31,6 +31,7 @@ const ramos = [
   { id: "bioq", nombre: "Bioquímica", requisitos: ["qo2"], abre: ["micro", "bioqClin", "farm1"], semestre: 5 },
   { id: "qf", nombre: "Química-Física", requisitos: ["qg2", "calculo1", "fisica"], abre: ["farmacoK", "fq1"], semestre: 5 },
   { id: "fisioPat", nombre: "Fisiopatología", requisitos: ["fisio"], abre: ["farm1", "bioqClin"], semestre: 5 },
+  { id: "analisis", nombre: "Análisis Instrumental", requisitos: ["qa1"], abre: ["tecfarma1"], semestre: 5 }, 
 
   { id: "micro", nombre: "Microbiología e inmunología", requisitos: ["bioq", "fisio"], abre: [], semestre: 6 },
   { id: "farm1", nombre: "Farmacología I", requisitos: ["bioq", "fisioPat"], abre: ["farm2", "saludPublica"], semestre: 6 },
