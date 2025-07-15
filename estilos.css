@@ -60,12 +60,12 @@ h1.titulo {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
   border: 2px solid #5dcde3;
-  background-color: #b8d1f5; 
+  background-color: #cfeffa; 
   box-shadow: 0 0.4vw 0.6vw rgba(0, 0, 0, 0.1);
 }
 
 .ramo:hover {
-  background-color: #b8d1f5; 
+  background-color: #cfeffa; 
   transform: translateY(-2px); 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
 }
